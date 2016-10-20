@@ -16,9 +16,9 @@ public class CircleArrayApplet extends JApplet {
 	private CircleArray arr;
 
 	public void init() {
-		this.setSize(600, 600);
+		this.setSize(600, 300);
 		parser = JOptionPane
-				.showInputDialog("How many circles do you want to see [1 - 20]?");
+				.showInputDialog("How many circles do you want to see [1 - 40]?");
 		numberOfCircles = Integer.parseInt(parser);
 		if (numberOfCircles > 40)
 			numberOfCircles = 40;
