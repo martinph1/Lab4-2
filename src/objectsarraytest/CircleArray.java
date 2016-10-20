@@ -1,22 +1,22 @@
 package objectsarraytest;
 
 import java.awt.Color;
+import java.util.Arrays;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Random;
 
 public class CircleArray implements Iterable<Circle> {
-	private LinkedList<Circle> circles;
+	private Circle [] circles;
 
 	public CircleArray(int n) {
-		circles = new LinkedList<Circle>();
+		circles = new Circle [n];
 		for (int i = 0; i < n; i++) {
 			Random num = new Random();
 			Circle temp = new Circle(num.nextDouble() * 500,
-					num.nextDouble() * 300, num.nextDouble() * 60, new Color(
-							(int) (num.nextDouble() * 0xFFFFFF)),
+					num.nextDouble() * 300, num.nextDouble() * 60, 
+					new Color((int) (num.nextDouble() * 0xFFFFFF)),
 					EnglishNumberToWords.convert(i + 1));
-			circles.add(temp);
+			circles[i] = temp;
 		}
 	}
 
@@ -31,9 +31,9 @@ public class CircleArray implements Iterable<Circle> {
 
 	@Override
 	public Iterator<Circle> iterator() {
-		
-		return circles.iterator();
-		
+
+		return Arrays.asList(circles).iterator();
+
 	}
 
 }

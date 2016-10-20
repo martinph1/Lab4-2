@@ -20,8 +20,8 @@ public class CircleArrayApplet extends JApplet {
 		parser = JOptionPane
 				.showInputDialog("How many circles do you want to see [1 - 20]?");
 		numberOfCircles = Integer.parseInt(parser);
-		if (numberOfCircles > 20)
-			numberOfCircles = 20;
+		if (numberOfCircles > 40)
+			numberOfCircles = 40;
 		arr = new CircleArray(numberOfCircles);
 		arr.printTabNames();
 

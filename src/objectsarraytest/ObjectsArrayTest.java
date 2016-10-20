@@ -6,6 +6,7 @@ public class ObjectsArrayTest {
 
 		CircleArray arr = new CircleArray(50);
 		arr.printTabNames();
+		
 
 	}
 
